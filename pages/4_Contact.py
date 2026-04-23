@@ -89,7 +89,7 @@ with col1:
     email = st.text_input("📧 Email")
     message = st.text_area("💬 Message")
 
-    colA, colB = st.columns(2)
+    colA,= st.columns(1)
 
     with colA:
         if st.button("Send Message"):
@@ -97,10 +97,6 @@ with col1:
                 st.success("Message sent successfully ✅")
             else:
                 st.error("Please fill in all fields")
-
-    with colB:
-        if st.button("Clear"):
-            st.rerun()
 
     st.markdown("</div>", unsafe_allow_html=True)
 
